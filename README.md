@@ -32,16 +32,15 @@ Deez-Chain/
 | 🛡️ Tamper Detection    | Any change in block data breaks the hash chain, making tampering detectable |
 
 ---
-## 🚀 What’s Next?
-📖 Before I chain blocks, I must chain myself to textbooks, Here’s how I plan to scale Deez-Chain into a more complete blockchain system:
+## ⚙️ Want to Scale It?
+
+May refactor or expand this down the line
 
 | Feature        | Description                                                           |
 |----------------|-----------------------------------------------------------------------|
 | ✅ Transactions | Add sender, receiver, amount, and digital signature              |
 | ✅ Wallets      | Use public/private key pairs to send and receive funds               |
-| ✅ Merkle Tree  | Efficiently verify transaction integrity inside a block              |
 | 🌐 Networking   | Build a peer-to-peer network using sockets or REST APIs              |
-| 🧾 Consensus    | Implement simple consensus algorithms like longest chain or proof-of-stake |
 | 🧱 Persistence  | Store blockchain to a file or database for reloading after shutdown  |
 | 📉 Web UI       | Use JavaFX or a lightweight web server (like SparkJava) for frontend |
 ---
