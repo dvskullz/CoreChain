@@ -1,4 +1,4 @@
-# ⛓️ Deez-Chain – Java Blockchain 🔐
+# ⛓️ D-Chain – Java Blockchain 🔐
 
 This is a **basic blockchain implementation in Java**, created to demonstrate the core concepts of blockchain technology such as block structure, proof of work, hashing, and chain validation.
 
