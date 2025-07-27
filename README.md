@@ -1,7 +1,8 @@
 # 🔗 Basic Blockchain in Java
 
-**This is a **basic blockchain implementation in Java**, created to demonstrate the core concepts of blockchain technology such as block structure, proof of work, hashing, and chain validation.
-**---
+This is a **basic blockchain implementation in Java**, created to demonstrate the core concepts of blockchain technology such as block structure, proof of work, hashing, and chain validation.
+
+---
 ## ✨ Features
 
 - 📦 **Block Structure**: Each block stores data, a timestamp, a unique hash, and the hash of the previous block.
