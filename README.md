@@ -33,8 +33,7 @@ Deez-Chain/
 
 ---
 ## 🚀 What’s Next?
-
-Here’s how I plan to scale Deez-Chain into a more complete blockchain system:
+📖 Before I chain blocks, I must chain myself to textbooks, Here’s how I plan to scale Deez-Chain into a more complete blockchain system:
 
 | Feature        | Description                                                           |
 |----------------|-----------------------------------------------------------------------|
