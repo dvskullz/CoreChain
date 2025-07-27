@@ -14,9 +14,9 @@ This is a **basic blockchain implementation in Java**, created to demonstrate th
 <pre>
 Deez-Chain/
 ├── src/
-│ ├── Block.java # Defines the structure of each block
-│ ├── deezChain.java # Main class to run and test the blockchain
-│ ├── StringUtil.java # Helper methods (e.g., SHA-256 hashing, difficulty prefix)
+│ ├── Block.java              # Defines the structure of each block
+│ ├── deezChain.java          # Main class to run and test the blockchain
+│ ├── StringUtil.java         # Helper methods (e.g., SHA-256 hashing, difficulty prefix)
 ├── .gitignore
 ├── Deez-Chain.iml
 └── Readme.md
