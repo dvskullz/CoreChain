@@ -1,4 +1,4 @@
-# ⛓️ D-Chain – Java Blockchain 🔐
+# ⛓️ CoreChain – Java Blockchain 🔐
 
 This is a **basic blockchain implementation in Java**, created to demonstrate the core concepts of blockchain technology such as block structure, proof of work, hashing, and chain validation.
 
@@ -12,13 +12,13 @@ This is a **basic blockchain implementation in Java**, created to demonstrate th
 ---
 ## 📁 Project Structure
 <pre>
-Deez-Chain/
+CoreChain/
 ├── src/
 │ ├── Block.java              # Defines the structure of each block
-│ ├── deezChain.java          # Main class to run and test the blockchain
+│ ├── CoreChain.java          # Main class to run and test the blockchain
 │ ├── StringUtil.java         # Helper methods (e.g., SHA-256 hashing, difficulty prefix)
 ├── .gitignore
-├── Deez-Chain.iml
+├── CoreChain.iml
 └── Readme.md
 </pre>
 ---
@@ -57,7 +57,7 @@ May refactor or expand this down the line
 
 3. **Run the main:**
 
-    java deezChain
+    java CoreChain
 
 4. The console will display the creation of blocks, their hashes, and validation status.
 </pre>
