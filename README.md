@@ -1,4 +1,4 @@
-# 🔗 Basic Blockchain in Java
+# ⛓️ Deez-Chain – Java Blockchain 🔐
 
 This is a **basic blockchain implementation in Java**, created to demonstrate the core concepts of blockchain technology such as block structure, proof of work, hashing, and chain validation.
 
@@ -32,17 +32,15 @@ Deez-Chain/
 | 🛡️ Tamper Detection    | Any change in block data breaks the hash chain, making tampering detectable |
 
 ---
-## ⚙️ Want to Scale It?
+## ⚙️ Want to Scale It
 
 May refactor or expand this down the line
 
 | Feature        | Description                                                           |
 |----------------|-----------------------------------------------------------------------|
 | ✅ Transactions | Add sender, receiver, amount, and digital signature              |
-| ✅ Wallets      | Use public/private key pairs to send and receive funds               |
-| 🌐 Networking   | Build a peer-to-peer network using sockets or REST APIs              |
-| 🧱 Persistence  | Store blockchain to a file or database for reloading after shutdown  |
-| 📉 Web UI       | Use JavaFX or a lightweight web server (like SparkJava) for frontend |
+| ✅ Wallets      | Use public/private key pairs to provides wallets using Elliptic-Curve cryptography.             |
+| ✅ Security     | Secures the transfer of funds, by using a digital signature algorithm to prove ownership.|
 ---
 
 ## ▶️ How to Run
@@ -62,4 +60,41 @@ May refactor or expand this down the line
     java deezChain
 
 4. The console will display the creation of blocks, their hashes, and validation status.
+</pre>
+
+## Output
+<pre>
+ Trying to Mine block 1... 
+Block Mined!!! : 0000031d57dac136fe4fc0e11506f999d618fb2ba044f31c8018e8b51b21b49f
+Trying to Mine block 2... 
+Block Mined!!! : 00000125ae9c86ccd8e5dd3ac859e6364695b5f6cf4aa404cd8b60697b266ea8
+Trying to Mine block 3... 
+Block Mined!!! : 00000cd2785bcba9b3130c18bd14454ed427ed97427b924667701a5ed962a557
+
+Blockchain is Valid: true
+
+The block chain: 
+[
+  {
+    "hash": "0000031d57dac136fe4fc0e11506f999d618fb2ba044f31c8018e8b51b21b49f",
+    "previousHash": "0",
+    "data": "Hi im the first block",
+    "timeStamp": 1753642607389,
+    "nonce": 724771
+  },
+  {
+    "hash": "00000125ae9c86ccd8e5dd3ac859e6364695b5f6cf4aa404cd8b60697b266ea8",
+    "previousHash": "0000031d57dac136fe4fc0e11506f999d618fb2ba044f31c8018e8b51b21b49f",
+    "data": "Yo im the second block",
+    "timeStamp": 1753642608151,
+    "nonce": 67486
+  },
+  {
+    "hash": "00000cd2785bcba9b3130c18bd14454ed427ed97427b924667701a5ed962a557",
+    "previousHash": "00000125ae9c86ccd8e5dd3ac859e6364695b5f6cf4aa404cd8b60697b266ea8",
+    "data": "Hey im the third block",
+    "timeStamp": 1753642608227,
+    "nonce": 776357
+  }
+]
 </pre>
