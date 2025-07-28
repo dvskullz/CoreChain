@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Deez-Chain.iml" filepath="$PROJECT_DIR$/Deez-Chain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoreChain.iml" filepath="$PROJECT_DIR$/CoreChain.iml" />
     </modules>
   </component>
 </project>

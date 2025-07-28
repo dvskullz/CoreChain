@@ -14,14 +14,38 @@
 
 import java.util.ArrayList;
 import com.google.gson.GsonBuilder;
+import java.security.Security;
+import java.util.Base64;
+import java.util.HashMap;
 
-public class deezChain {
+public class CoreChain {
 
     public static ArrayList<Block> blockchain = new ArrayList<Block>();
+    public static HashMap<String,TransactionOutputs> UTXOs = new HashMap<String,TransactionOutputs>(); //list of all unspent transactions.
     public static int difficulty = 5;
+    public static Wallet walletA;
+    public static Wallet walletB;
 
     public static void main(String[] args) {
         //add our blocks to the blockchain ArrayList:
+        //Setup Bouncey castle as a Security Provider
+        Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+        //Create the new wallets
+        walletA = new Wallet();
+        walletB = new Wallet();
+
+        //Test public and private keys
+        System.out.println("Private and public keys:");
+        System.out.println(StringUtil.getStringFromKey(walletA.privateKey));
+        System.out.println(StringUtil.getStringFromKey(walletA.publicKey));
+
+        //Create a test transaction from WalletA to walletB
+        Transaction transaction = new Transaction(walletA.publicKey, walletB.publicKey, 5, null);
+        transaction.generateSignature(walletA.privateKey);
+
+        //Verify the signature works and verify it from the public key
+        System.out.println("Is signature verified");
+        System.out.println(transaction.verifySignature());
 
         blockchain.add(new Block("Hi im the first block", "0"));
         System.out.println("Trying to Mine block 1... ");
