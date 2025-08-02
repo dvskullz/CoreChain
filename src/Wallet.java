@@ -3,6 +3,7 @@ import java.security.spec.ECGenParameterSpec;
 import java.util.ArrayList;
 import java.util.Map;
 
+
 public class Wallet {
     public PrivateKey privateKey;
     public PublicKey publicKey;
