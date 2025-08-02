@@ -14,14 +14,18 @@ This is a **basic blockchain implementation in Java**, created to demonstrate th
 <pre>
 CoreChain/
 ├── src/
-│ ├── Block.java              # Defines the structure of each block
-│ ├── CoreChain.java          # Main class to run and test the blockchain
-│ ├── StringUtil.java         # Helper methods (e.g., SHA-256 hashing, difficulty prefix)
+│   ├── Block.java              # Represents a block with transactions and PoW mining
+│   ├── CoreChain.java          # Main class to initialize blockchain, wallets, and validate chain
+│   ├── StringUtil.java         # Utility functions: SHA-256 hashing, ECDSA signature, Merkle root
+│   ├── Transaction.java        # Handles transactions: inputs/outputs, signatures, and processing
+│   ├── TransactionInputs.java  # Refers to unspent outputs used in a transaction
+│   ├── TransactionOutputs.java # Represents unspent outputs (UTXOs) owned by a public key
+│   ├── Wallet.java             # Generates key pairs, manages UTXOs, and creates signed transactions
 ├── .gitignore
 ├── CoreChain.iml
 └── Readme.md
 </pre>
----
+
 ## 📚 Concepts Demonstrated
 
 | Concept               | Description                                                                 |
@@ -32,24 +36,26 @@ CoreChain/
 | 🛡️ Tamper Detection    | Any change in block data breaks the hash chain, making tampering detectable |
 
 ---
-## ⚙️ Want to Scale It
+## ✅ Supported Features
 
-May refactor or expand this down the line
+| Feature                  | Description                                                                |
+|--------------------------|-----------------------------------------------------------------------------|
+| ✅ **Transactions**       | With sender, receiver, amount, and **input/output** logic                  |
+| ✅ **Wallets**            | Use **Elliptic Curve Cryptography (ECC)** for key generation               |
+| ✅ **Digital Signatures** | All transactions are signed and verified with public/private keys          |
+| ✅ **Proof of Work**      | Mining blocks using a difficulty-based hashing challenge                   |
+| ✅ **UTXO model**         | Like Bitcoin, using unspent outputs for balance and transaction validation |
+| ✅ **Chain Validation**   | Full blockchain integrity check with hash + signature + UTXO replay        |
 
-| Feature        | Description                                                           |
-|----------------|-----------------------------------------------------------------------|
-| ✅ Transactions | Add sender, receiver, amount, and digital signature              |
-| ✅ Wallets      | Use public/private key pairs to provides wallets using Elliptic-Curve cryptography.             |
-| ✅ Security     | Secures the transfer of funds, by using a digital signature algorithm to prove ownership.|
 ---
 
 ## ▶️ How to Run
  <pre>
 1. **Clone the repository:**
    
-    https://github.com/dvskullz/Dee-Chain.git
+    https://github.com/dvskullz/CoreChain.git
 
-    cd Deez-Chain
+    cd CoreChain
 
 2. **Compile all files:**
 
@@ -62,39 +68,4 @@ May refactor or expand this down the line
 4. The console will display the creation of blocks, their hashes, and validation status.
 </pre>
 
-## Output
-<pre>
- Trying to Mine block 1... 
-Block Mined!!! : 0000031d57dac136fe4fc0e11506f999d618fb2ba044f31c8018e8b51b21b49f
-Trying to Mine block 2... 
-Block Mined!!! : 00000125ae9c86ccd8e5dd3ac859e6364695b5f6cf4aa404cd8b60697b266ea8
-Trying to Mine block 3... 
-Block Mined!!! : 00000cd2785bcba9b3130c18bd14454ed427ed97427b924667701a5ed962a557
 
-Blockchain is Valid: true
-
-The block chain: 
-[
-  {
-    "hash": "0000031d57dac136fe4fc0e11506f999d618fb2ba044f31c8018e8b51b21b49f",
-    "previousHash": "0",
-    "data": "Hi im the first block",
-    "timeStamp": 1753642607389,
-    "nonce": 724771
-  },
-  {
-    "hash": "00000125ae9c86ccd8e5dd3ac859e6364695b5f6cf4aa404cd8b60697b266ea8",
-    "previousHash": "0000031d57dac136fe4fc0e11506f999d618fb2ba044f31c8018e8b51b21b49f",
-    "data": "Yo im the second block",
-    "timeStamp": 1753642608151,
-    "nonce": 67486
-  },
-  {
-    "hash": "00000cd2785bcba9b3130c18bd14454ed427ed97427b924667701a5ed962a557",
-    "previousHash": "00000125ae9c86ccd8e5dd3ac859e6364695b5f6cf4aa404cd8b60697b266ea8",
-    "data": "Hey im the third block",
-    "timeStamp": 1753642608227,
-    "nonce": 776357
-  }
-]
-</pre>
