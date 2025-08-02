@@ -15,6 +15,7 @@ public class TransactionOutputs {
             this.id = StringUtil.applySha256(StringUtil.getStringFromKey(reciepient)+Float.toString(value)+parentTransactionId);
         }
 
+
         //Check if coin belongs to you
         public boolean isMine(PublicKey publicKey) {
             return (publicKey == recipient);
